@@ -13,4 +13,4 @@ def train():
 def testApi():
     return "success"
 
-app.run()
+app.run(port=5000)
