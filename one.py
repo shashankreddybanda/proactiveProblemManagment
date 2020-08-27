@@ -12,7 +12,7 @@ def train():
 
 @app.route('/test', methods=['GET', 'POST'])
 def testApi():
-    return "success"
+    return type(request.data)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 33507))
