@@ -12,7 +12,8 @@ def train():
 
 @app.route('/test', methods=['GET', 'POST'])
 def testApi():
-    return type(request.data)
+    print((request.data).decode('utf-8')[:100])
+    return str(type(request.data))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 33507))
