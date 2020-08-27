@@ -12,6 +12,7 @@ def train():
 
 @app.route('/test', methods=['GET', 'POST'])
 def testApi():
+    print((request.data).decode('utf-8')[:100])
     return str(type(request.data))
 
 if __name__ == "__main__":
