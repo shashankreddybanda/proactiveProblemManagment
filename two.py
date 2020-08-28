@@ -62,7 +62,7 @@ def train(incidents, addStopwords, numTopics, businessService):
             incident = {}
             incident['contact_type'] = incidents[i]['contact_type']
             incident['number'] = incidents[i]['number']
-            incident['text'] = incidents[i]['short_description'] + incidents[i]['description']
+            incident['text'] = incidents[i]['short_description'] + incidents[i]['description'] + incidents[i]['assignment_group']
             incidentsList.append(incident)
             
         # Considers only bot contact type and prunes incidents with long discriptions  
