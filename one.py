@@ -1,5 +1,6 @@
 from flask import Flask, request
 from two import apiCall
+from three import getRecords
 import json
 import os
 
@@ -12,7 +13,8 @@ def train():
 
 @app.route('/test', methods=['GET', 'POST'])
 def testApi():
-    print(request.data[:1000])
+    data = getRecords()
+    print(data["result"][0])
     return str(type(request.data))
 
 if __name__ == "__main__":
